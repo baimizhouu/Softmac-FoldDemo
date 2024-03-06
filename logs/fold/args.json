@@ -1,0 +1,7 @@
+{
+    "exp_name": "fold",
+    "config": "config/demo_fold_config.py",
+    "render_interval": 1,
+    "epochs": 2,
+    "steps": 15
+}

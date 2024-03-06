@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<robot name="dough">
+  <link name="world"/>
+  <joint name="dough_to_world" type="floating">
+    <parent link="world"/>
+    <child link="dough_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <link name="dough_link">
+    <inertial>
+       <origin rpy="0 0 0" xyz="0 0 0"/>
+       <mass value="1.0"/> <!-- 根据实际面团的质量调整 -->
+       <inertia ixx="0.01" ixy="0" ixz="0" iyx="0" iyy="0.01" iyz="0" izx="0" izy="0" izz="0.01"/> <!-- 根据实际面团的惯性矩调整 -->
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry> <mesh filename="dough.obj" scale="1.0 1.0 1.0"/> </geometry>
+      <material name="dough_color"> <color rgba="0.96 0.87 0.70 1.0"/> </material> <!-- 根据需要调整面团的颜色 -->
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry> <mesh filename="dough.obj" scale="1.0 1.0 1.0"/> </geometry>
+    </collision>
+  </link>
+</robot>
